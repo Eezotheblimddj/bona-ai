@@ -18,11 +18,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Initialize Gradle Wrapper
-        run: gradle wrapper
-
       - name: Build APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: bash ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
